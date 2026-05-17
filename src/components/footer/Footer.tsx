@@ -15,12 +15,17 @@ export const Footer = () => {
             <span className="uppercase text-2xl font-black">Свайп·курсант</span>
           </div>
           <p className="text-sm text-gray-400">
-            Профориентационный проект для абитуриентов вузов России. Реализован при поддержке Управления военного образования.
+            Профориентационный проект для абитуриентов вузов России. Реализован
+            при поддержке Управления военного образования.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {FOOTER_LINKS.map((section) => (
-            <FooterColumn key={section.title} title={section.title} links={section.links} />
+            <FooterColumn
+              key={section.title}
+              title={section.title}
+              links={section.links}
+            />
           ))}
           <div className="text-sm">
             <h3 className="text-gray-400 mb-4 uppercase">Контакты</h3>
@@ -46,4 +51,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-}
+};

@@ -7,7 +7,7 @@
   --primary: #0000FE;
   --secondary: #FE0000;
 
-  --font-sans: "Golos Text", sans-serif;
+  --font-sans: "Unbounded", sans-serif;
 }
 
 @theme {
@@ -17,12 +17,12 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 
-  --font-sans: var(--font-sans)
+  --font-sans: var(--font-sans);
 }
 
 @layer base {
   body {
-    background-color: var(--color-background);
+    background-color: var(--background);
     font-family: var(--font-sans);
   }
 }

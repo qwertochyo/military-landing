@@ -1,9 +1,9 @@
 interface Props {
-  title: string
+  title: string;
   links: {
-    label: string
-    href: string
-  }[]
+    label: string;
+    href: string;
+  }[];
 }
 
 export const FooterColumn = ({ title, links }: Props) => {
@@ -13,7 +13,10 @@ export const FooterColumn = ({ title, links }: Props) => {
       <ul>
         {links.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="hover:text-secondary cursor-pointer transition-transform duration-300">
+            <a
+              href={link.href}
+              className="hover:text-secondary cursor-pointer transition-transform duration-300"
+            >
               {link.label}
             </a>
           </li>
@@ -21,4 +24,4 @@ export const FooterColumn = ({ title, links }: Props) => {
       </ul>
     </div>
   );
-}
+};
