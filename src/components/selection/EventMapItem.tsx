@@ -7,7 +7,7 @@ interface Props {
 
 export const EventMapItem = ({ time, title, subtitle, stage }: Props) => {
   return (
-    <div className="flex items-center gap-6 justify-between px-2 py-4 border-b border-gray-300 last:border-0">
+    <div className="flex items-center gap-3 justify-between px-2 py-4 border-b border-gray-300 last:border-0">
       <div className="flex gap-4">
         <div className="self-stretch border-r-2 border-dashed pr-3 flex items-center text-sm font-semibold">
           {time}
@@ -21,7 +21,7 @@ export const EventMapItem = ({ time, title, subtitle, stage }: Props) => {
         </div>
       </div>
 
-      <span className="px-1.5 py-0.5 bg-primary text-white rounded-md font-bold text-[12px]">{stage}</span>
+      <span className="whitespace-nowrap px-1.5 py-0.5 bg-primary text-white rounded-md font-bold text-[12px] uppercase">{stage}</span>
     </div>
   );
 };

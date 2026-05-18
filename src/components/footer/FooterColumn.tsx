@@ -15,7 +15,7 @@ export const FooterColumn = ({ title, links }: Props) => {
           <li key={link.label}>
             <a
               href={link.href}
-              className="hover:text-secondary cursor-pointer transition-transform duration-300"
+              className="hover:text-secondary cursor-pointer transition-colors duration-300"
             >
               {link.label}
             </a>
