@@ -2,6 +2,7 @@ import { Header } from "./components/header/Header";
 import { Selection } from "./components/selection/Selection";
 import { Marquee } from "./components/marquee/Marquee";
 import { InfoStudents } from "./components/info-students/InfoStudents";
+import { Request } from "./components/request/Request";
 import { Footer } from "./components/footer/Footer";
 
 export const App = () => {
@@ -11,6 +12,7 @@ export const App = () => {
       <Selection />
       <Marquee />
       <InfoStudents />
+      <Request />
       <Footer />
     </>
   );

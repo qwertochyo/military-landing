@@ -32,7 +32,7 @@ export const InfoTable = () => {
       </div>
       <div className="flex flex-col border-t-2">
         {REQUIREMENTS.map((item, idx) => (
-          <div className="flex gap-6 justify-between py-6 items-center border-b last:border-0">
+          <div key={item.label} className="flex gap-6 justify-between py-6 items-center border-b last:border-0">
             <div className="flex gap-10 items-center">
               <div className="text-sm">{"0" + (idx + 1)}</div>
               <p className="text-lg font-semibold">{item.label}</p>
@@ -43,7 +43,7 @@ export const InfoTable = () => {
       </div>
       <div>
           <a className="inline-block bg-secondary px-7 py-3 text-white rounded-full border-2 border-black shadow-[3px_3px_0] shadow-black font-bold hover:-translate-x-0.5 hover:-translate-y-0.5 cursor-pointer transition-transform duration-300">
-            Список вузов
+            Посмотреть список вузов
           </a>
       </div>
     </div>

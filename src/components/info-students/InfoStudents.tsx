@@ -19,8 +19,8 @@ export const InfoStudents = () => {
         </div>
         <div className="grid grid-cols-1 gap-10 justify-between xl:grid-cols-[1.1fr_0.9fr]">
           <InfoTable />
-          <div className="w-full h-full flex flex-col gap-5">
-            <div className="w-full h-[40%] bg-primary rounded-4xl relative border-2 overflow-hidden">
+          <div className="flex w-full min-h-70 xl:min-h-0 flex-row h-full xl:flex-col gap-5">
+            <div className="w-full h-full xl:h-[40%] bg-primary rounded-4xl relative border-2 overflow-hidden">
               {/* <img className="object-cover w-full h-full" src="" alt="Парадный строй" /> */}
               <div className="absolute top-5 left-7">
                 <p className="text-white font-semibold text-xl tracking-widest">
@@ -28,7 +28,7 @@ export const InfoStudents = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full h-[30%] bg-secondary rounded-4xl relative border-2 overflow-hidden">
+            <div className="w-full h-full xl:h-[30%] bg-secondary rounded-4xl relative border-2 overflow-hidden">
               {/* <img className="object-cover w-full h-full" src="" alt="Учебная аудитория" /> */}
               <div className="absolute bottom-5 right-7">
                 <p className="font-semibold text-xl tracking-widest">

@@ -25,7 +25,7 @@ export const Marquee = () => {
             className="flex gap-10 whitespace-nowrap text-2xl font-semibold text-white "
           >
             {MARQUEE_ITEMS.map((item, i) => (
-              <div className="flex gap-10 items-center">
+              <div key={item.label} className="flex gap-10 items-center">
                 <span
                   className={`block size-4 rounded-full ${
                     i % 2 === 0 ? "bg-primary" : "bg-secondary"

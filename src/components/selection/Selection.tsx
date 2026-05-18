@@ -18,7 +18,7 @@ export const Selection = () => {
           <Timer />
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center xl:justify-end  items-center">
         <EventMap />
       </div>
     </div>
