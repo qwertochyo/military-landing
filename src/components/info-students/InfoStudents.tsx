@@ -1,4 +1,6 @@
 import { InfoTable } from "./InfoTable";
+import classroomImg from "../../assets/classroom.jpg";
+import lineupImg from "../../assets/line-up.jpg";
 
 export const InfoStudents = () => {
   return (
@@ -20,17 +22,25 @@ export const InfoStudents = () => {
         <div className="grid grid-cols-1 gap-10 justify-between xl:grid-cols-[1.1fr_0.9fr]">
           <InfoTable />
           <div className="flex w-full min-h-70 xl:min-h-0 flex-row h-full xl:flex-col gap-5">
-            <div className="w-full h-full xl:h-[40%] bg-primary rounded-4xl relative border-2 overflow-hidden">
-              {/* <img className="object-cover w-full h-full" src="" alt="Парадный строй" /> */}
-              <div className="absolute top-5 left-7">
-                <p className="text-white font-semibold text-xl tracking-widest">
+            <div className="w-full h-full xl:h-[45%] rounded-4xl relative border-2 border-primary overflow-hidden">
+              <img
+                className="object-cover w-full h-full"
+                src={lineupImg}
+                alt="Парадный строй"
+              />
+              <div className="absolute top-5 right-7">
+                <p className="font-semibold text-xl tracking-widest">
                   Парадный строй
                 </p>
               </div>
             </div>
-            <div className="w-full h-full xl:h-[30%] bg-secondary rounded-4xl relative border-2 overflow-hidden">
-              {/* <img className="object-cover w-full h-full" src="" alt="Учебная аудитория" /> */}
-              <div className="absolute bottom-5 right-7">
+            <div className="w-full h-full xl:h-[40%] rounded-4xl relative border-2 border-secondary overflow-hidden">
+              <img
+                className="object-cover w-full h-full"
+                src={classroomImg}
+                alt="Учебная аудитория"
+              />
+              <div className="absolute top-5 left-7">
                 <p className="font-semibold text-xl tracking-widest">
                   Учебная аудитория
                 </p>
