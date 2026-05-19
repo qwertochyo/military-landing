@@ -4,16 +4,15 @@ export const FOOTER_LINKS = [
   {
     title: "Проект",
     links: [
-      { label: "О тесте", href: "#" },
-      { label: "Пройти тест", href: "#" },
+      { label: "О тесте", href: "#selection" },
+      { label: "Пройти тест", href: "#interactive" },
     ],
   },
   {
     title: "Поступление",
     links: [
-      { label: "Требования", href: "#" },
-      { label: "Список вузов", href: "#" },
-      { label: "Документы", href: "#" },
+      { label: "Требования", href: "#info-students" },
+      { label: "Вопросы", href: "#request" },
     ],
   },
 ];

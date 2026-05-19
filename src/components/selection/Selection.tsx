@@ -5,7 +5,7 @@ import { Timer } from "./Timer";
 
 export const Selection = () => {
   return (
-    <div className="px-[8%] pt-[calc(5rem+5%)] pb-[8%] grid grid-cols-1 xl:grid-cols-2 gap-10">
+    <section id="selection" className="px-[8%] pt-[calc(5rem+5%)] pb-[8%] grid grid-cols-1 xl:grid-cols-2 gap-10">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4 text-[12px]">
           <span className="block w-6 h-0.5 bg-black"></span>
@@ -21,6 +21,6 @@ export const Selection = () => {
       <div className="flex justify-center xl:justify-end  items-center">
         <EventMap />
       </div>
-    </div>
+    </section>
   );
 };

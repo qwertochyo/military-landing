@@ -26,3 +26,7 @@
     font-family: var(--font-sans);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

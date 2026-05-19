@@ -3,7 +3,7 @@ import { RequestForm } from "./RequestForm";
 
 export const Request = () => {
   return (
-    <div className="p-[8%] grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-10">
+    <section id="request" className="p-[8%] grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-10">
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-4 text-[12px]">
           <span className="block w-6 h-0.5 bg-black"></span>
@@ -52,6 +52,6 @@ export const Request = () => {
       <div>
         <RequestForm />
       </div>
-    </div>
+    </section>
   );
 };

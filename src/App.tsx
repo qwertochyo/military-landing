@@ -4,6 +4,7 @@ import { Marquee } from "./components/marquee/Marquee";
 import { InfoStudents } from "./components/info-students/InfoStudents";
 import { Request } from "./components/request/Request";
 import { Footer } from "./components/footer/Footer";
+import { Interactive } from "./components/interactive/Interactive";
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Selection />
       <Marquee />
       <InfoStudents />
+      <Interactive />
       <Request />
       <Footer />
     </>

@@ -3,12 +3,11 @@ import { NavItem } from "./NavItem";
 import { BurgerMenu } from "./BurgerMenu";
 
 const NAV_LINKS = [
-  { label: "Отбор", href: "" },
-  { label: "Поступающим", href: "" },
-  { label: "Тест на роль", href: "" },
-  { label: "Вопросы", href: "" },
+  { label: "Отбор", href: "#selection" },
+  { label: "Поступающим", href: "#info-students" },
+  { label: "Тест на роль", href: "#interactive" },
+  { label: "Вопросы", href: "#request" },
 ];
-
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
