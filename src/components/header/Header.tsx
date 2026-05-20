@@ -40,6 +40,7 @@ export const Header = () => {
           <a
             className="hidden xl:block bg-primary px-5 py-3 text-white text-sm rounded-full border-2 border-black 
           shadow-[3px_3px_0] shadow-black font-bold hover:-translate-x-0.5 hover:-translate-y-0.5 cursor-pointer transition-transform duration-300"
+            href="#interactive"
           >
             Подать заявку
             <span className="ml-2">→</span>
