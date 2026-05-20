@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { FooterColumn } from "./FooterColumn";
 
 export const FOOTER_LINKS = [
@@ -19,7 +20,13 @@ export const FOOTER_LINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="px-[8%] py-[3%] flex flex-col gap-10 bg-black text-white">
+    <motion.footer
+      className="px-[8%] py-[3%] flex flex-col gap-10 bg-black text-white"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
@@ -65,6 +72,6 @@ export const Footer = () => {
           <span className="block w-5 h-2 bg-secondary border border-white/50"></span>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { NavItem } from "./NavItem";
 import { BurgerMenu } from "./BurgerMenu";
+import { motion } from "motion/react";
 
 const NAV_LINKS = [
   { label: "Отбор", href: "#selection" },
   { label: "Поступающим", href: "#info-students" },
   { label: "Тест на роль", href: "#interactive" },
-  { label: "Вопросы", href: "#request" },
+  { label: "Заявка", href: "#request" },
 ];
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 left-0 bg-white z-50">
+    <motion.header
+      className="fixed w-full top-0 left-0 bg-white z-50"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className={`px-[8%] h-20 ${isOpen ? "border-0" : "border-b-2"}`}>
         <div className="flex justify-between items-center h-full">
           <div className="flex items-center gap-4">
@@ -53,6 +59,6 @@ export const Header = () => {
           ))}
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 };

@@ -3,9 +3,10 @@ import { CARDS_DATA } from "../../../data/data";
 import type { ICardItem } from "../../../types/types";
 
 export const useSwipeTest = () => {
-  const [cards, setCards] = useState<ICardItem[]>(CARDS_DATA);
+  const [cards, setCards] = useState<ICardItem[]>([...CARDS_DATA]);
   const [liked, setLiked] = useState<ICardItem[]>([]);
   const [randomIdx, setRandomIdx] = useState<number | null>(null);
+  const [resetKey, setResetKey] = useState(0);
 
   const total = CARDS_DATA.length;
   const current = total - cards.length;
@@ -37,12 +38,14 @@ export const useSwipeTest = () => {
   };
 
   const reset = () => {
-    setCards(CARDS_DATA);
+    setCards([...CARDS_DATA].sort(() => Math.random() - 0.5));
     setLiked([]);
     setRandomIdx(null);
+    setResetKey(prev => prev + 1);
   };
 
   return {
+    resetKey,
     cards,
     liked,
     randomIdx,

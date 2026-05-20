@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useSwipeCard } from "./hooks/useSwipeCard";
 import type { ICardItem } from "../../types/types";
 import { useEffect, useState } from "react";
+import { useShakeCard } from "./hooks/useShakeCard";
 
 interface Props {
   card: ICardItem;
@@ -18,7 +19,6 @@ export const SwipeCardItem = ({
   setCards,
   onLike,
 }: Props) => {
-  const [shake, setShake] = useState(false);
 
   const { id, name, age, direction, role, image, description, skills } = card;
 
@@ -33,25 +33,12 @@ export const SwipeCardItem = ({
     onLike
   );
 
-  useEffect(() => {
-    if (!infoTrigger) return;
-
-    setShake(true);
-
-    const t = setTimeout(() => {
-      setShake(false);
-    }, 300);
-
-    return () => clearTimeout(t);
-  }, [infoTrigger]);
-
+  const { animate, transition } = useShakeCard({ isFront, infoTrigger });
+    
   return (
     <motion.div
       className="flex flex-col gap-4 max-w-100 w-full bg-white border-2 text-black p-5 rounded-3xl shadow-[6px_6px_0] shadow-secondary hover:cursor-grab active:cursor-grabbing origin-bottom"
       style={{
-        gridRow: 1,
-        gridColumn: 1,
-        zIndex: index,
         x,
         opacity,
         rotate,
@@ -64,10 +51,8 @@ export const SwipeCardItem = ({
       }}
       onDragEnd={handleDragEnd}
       initial={{ x: 0 }}
-      animate={isFront && shake ? { x: [-10, 10, -6, 6, 0] } : { x: 0 }}
-      transition={{
-        duration: 0.3,
-      }}
+      animate={animate}
+      transition={transition}
     >
       <div className="flex justify-between text-[12px] uppercase tracking-widest text-gray-600">
         <div>
