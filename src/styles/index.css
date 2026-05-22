@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #F6F1EA;
+
+  --primary: #0000FE;
+  --secondary: #FE0000;
+
+  --font-sans: "Unbounded", sans-serif;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  --font-sans: var(--font-sans);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    font-family: var(--font-sans);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
