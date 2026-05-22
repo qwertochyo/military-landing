@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { useSwipeCard } from "./hooks/useSwipeCard";
 import type { ICardItem } from "../../types/types";
-import { useEffect, useState } from "react";
 import { useShakeCard } from "./hooks/useShakeCard";
 
 interface Props {
@@ -37,7 +36,7 @@ export const SwipeCardItem = ({
     
   return (
     <motion.div
-      className="flex flex-col gap-4 max-w-100 w-full bg-white border-2 text-black p-5 rounded-3xl shadow-[6px_6px_0] shadow-secondary hover:cursor-grab active:cursor-grabbing origin-bottom"
+      className="flex flex-col gap-4 max-w-90 sm:max-w-100 w-full bg-white border-2 text-black p-5 rounded-3xl shadow-[6px_6px_0] shadow-secondary hover:cursor-grab active:cursor-grabbing origin-bottom"
       style={{
         x,
         opacity,

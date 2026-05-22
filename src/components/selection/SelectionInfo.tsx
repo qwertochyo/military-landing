@@ -6,7 +6,7 @@ export const SelectionInfo = () => {
 
   return (
     <motion.div
-      className="flex gap-10 text-black tracking-tight mt-2"
+      className="flex flex-col gap-10 sm:flex-row text-black tracking-tight mt-2 "
       variants={container}
       initial="hidden"
       whileInView="visible"

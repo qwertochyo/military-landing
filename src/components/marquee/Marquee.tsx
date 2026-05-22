@@ -9,10 +9,10 @@ const MARQUEE_ITEMS = [
 
 export const Marquee = () => {
   return (
-    <div className="overflow-hidden bg-black py-4">
+    <div className="overflow-x-hidden bg-black py-4">
       <motion.div
-        className="flex w-full gap-10"
-        animate={{ x: ["0%", "-70%"] }}
+        className="flex gap-10"
+        animate={{ x: ["100%", "-50%"] }}
         transition={{
           repeat: Infinity,
           duration: 10,

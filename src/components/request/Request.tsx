@@ -14,7 +14,7 @@ export const Request = () => {
       <div className="flex flex-col gap-10">
         <motion.div
           className="flex items-center gap-4 text-[12px]"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: "-5%" }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -26,7 +26,7 @@ export const Request = () => {
           <div className="flex flex-col gap-5">
             <motion.h3
               className="text-[clamp(54px,4.4vw,64px)] leading-none font-bold"
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: "5%" }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -36,7 +36,7 @@ export const Request = () => {
             </motion.h3>
             <motion.p
               className="text-lg text-gray-600"
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: "-5%" }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
