@@ -23,7 +23,7 @@ const REQUIREMENTS = [
 
 export const InfoTable = () => {
   return (
-    <div className="flex flex-col gap-10 bg-white p-12 border-2 rounded-4xl shadow-[10px_10px_0] shadow-black">
+    <div className="flex flex-col gap-10 bg-white p-6 sm:p-12 border-2 rounded-4xl shadow-[10px_10px_0] shadow-black">
       <div className="flex flex-col gap-3">
         <h3 className="text-3xl tracking-tight font-bold">
           Требования к кандидату

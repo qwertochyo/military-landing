@@ -24,8 +24,10 @@ export const Selection = () => {
         <div className="flex flex-col gap-5">
           <SelectionHeroContent />
           <hr className="mt-10 border" />
-          <SelectionInfo />
-          <Timer />
+          <div className="flex flex-row sm:flex-col justify-center sm:justify-start gap-15 items-start">
+            <SelectionInfo />
+            <Timer />
+          </div>
         </div>
       </div>
       <motion.div

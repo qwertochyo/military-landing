@@ -17,7 +17,7 @@ export const RequestForm = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div className="flex gap-3" variants={itemRToL}>
+          <motion.div className="flex flex-col gap-3 sm:flex-row" variants={itemRToL}>
             <label className="flex flex-col w-full gap-2">
               <div className="flex justify-between">
                 <span className="uppercase text-[12px] font-light">Имя</span>
@@ -57,7 +57,7 @@ export const RequestForm = () => {
               />
             </label>
           </motion.div>
-          <motion.div className="flex gap-3" variants={itemRToL}>
+          <motion.div className="flex flex-col gap-3 sm:flex-row" variants={itemRToL}>
             <label className="flex flex-col w-full gap-2">
               <div className="flex justify-between">
                 <span className="uppercase text-[12px] font-light">
@@ -99,7 +99,7 @@ export const RequestForm = () => {
           </motion.div>
           <motion.label
             className="flex flex-col gap-2"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: "-10%" }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}

@@ -18,7 +18,7 @@ export const useAnimationList = (
   };
 
   const itemRToL: Variants = {
-    hidden: { opacity: 0, x: startValue },
+    hidden: { opacity: 0, x: `${startValue}%` },
     visible: {
       opacity: 1,
       x: 0,
@@ -26,7 +26,7 @@ export const useAnimationList = (
   };
 
   const itemLToR: Variants = {
-    hidden: { opacity: 0, x: -startValue },
+    hidden: { opacity: 0, x: `${-startValue}%` },
     visible: {
       opacity: 1,
       x: 0,
@@ -34,7 +34,7 @@ export const useAnimationList = (
   };
 
   const itemTToB: Variants = {
-    hidden: { opacity: 0, y: -startValue },
+    hidden: { opacity: 0, y: `${-startValue}%` },
     visible: {
       opacity: 1,
       y: 0,
@@ -42,7 +42,7 @@ export const useAnimationList = (
   };
 
   const itemBToT: Variants = {
-    hidden: { opacity: 0, y: startValue },
+    hidden: { opacity: 0, y: `${-startValue}%` },
     visible: {
       opacity: 1,
       y: 0,

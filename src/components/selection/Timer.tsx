@@ -8,7 +8,7 @@ export const Timer = () => {
 
   return (
     <motion.div
-      className="flex items-center gap-5 justify-end mt-15"
+      className="flex flex-col sm:flex-row items-center gap-5 sm:justify-end sm:self-end"
       variants={container}
       initial="hidden"
       whileInView="visible"

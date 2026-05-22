@@ -13,7 +13,7 @@ export const EventMapItem = ({ time, title, subtitle, stage }: Props) => {
           {time}
         </div>
         <div className="flex items-center gap-2 justify-start">
-          <span className="inline-block size-4 border-2 rounded-full"></span>
+          <span className="inline-block size-4 border-2 rounded-full shrink-0"></span>
           <div>
             <h4 className="font-bold text-lg">{title}</h4>
             <span className="text-sm text-gray-600 font-light">{subtitle}</span>
