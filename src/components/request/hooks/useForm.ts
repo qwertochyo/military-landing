@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type SyntheticEvent } from "react";
+import { useState, type SyntheticEvent, type ChangeEvent } from "react";
 
 const initialFormState = {
   name: "",
@@ -30,6 +30,11 @@ export const useForm = () => {
 
     const value =
       type === "checkbox" ? (target as HTMLInputElement).checked : target.value;
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
 
     setFormState((prev) => ({
       ...prev,
