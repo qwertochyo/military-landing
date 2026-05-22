@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type SyntheticEvent, type ChangeEvent } from "react";
 
 const initialFormState = {
   name: "",
@@ -22,17 +22,23 @@ export const useForm = () => {
   const [formState, setFormState] = useState(initialFormState);
   const [errorsState, setErrors] = useState(initialErrorsState);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const target = e.target;
+    const { name, type } = target;
 
-    setFormState((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    const value =
+      type === "checkbox" ? (target as HTMLInputElement).checked : target.value;
 
     setErrors((prev) => ({
       ...prev,
       [name]: "",
+    }));
+
+    setFormState((prev) => ({
+      ...prev,
+      [name]: value,
     }));
   };
 
@@ -65,7 +71,7 @@ export const useForm = () => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const validationErrors = validation();
@@ -77,6 +83,7 @@ export const useForm = () => {
     }
 
     setErrors(initialErrorsState);
+    setFormState(initialFormState);
 
     console.log(formState);
   };
