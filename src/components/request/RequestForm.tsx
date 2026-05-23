@@ -146,7 +146,7 @@ export const RequestForm = () => {
           </motion.label>
         </motion.div>
         <motion.div
-          className="flex justify-between items-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-1 justify-between items-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

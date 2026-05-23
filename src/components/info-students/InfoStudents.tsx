@@ -27,7 +27,7 @@ export const InfoStudents = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h2 className="text-[clamp(54px,4.4vw,64px)] leading-[0.8] font-bold">
+          <h2 className="text-[clamp(40px,4.4vw,64px)] leading-[0.8] font-bold">
             Информация для <span className="text-primary">поступающих</span>
           </h2>
           <p className="text-xl text-gray-600 font-light">

@@ -12,7 +12,7 @@ export const Marquee = () => {
     <div className="overflow-x-hidden bg-black py-4">
       <motion.div
         className="flex gap-10"
-        animate={{ x: ["100%", "-50%"] }}
+        animate={{ x: ["0%", "-70%"] }}
         transition={{
           repeat: Infinity,
           duration: 10,

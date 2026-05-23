@@ -18,7 +18,7 @@ export const Interactive = () => {
           </motion.div>
           <div className="flex gap-5 flex-col items-start lg:flex-row lg:items-end">
             <motion.h2
-              className="text-[clamp(54px,4.4vw,64px)] leading-[1.1] tracking-wide font-bold"
+              className="text-[clamp(40px,4.4vw,64px)] leading-[1.1] tracking-wide font-bold"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
