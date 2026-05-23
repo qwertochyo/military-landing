@@ -36,7 +36,7 @@ export const InfoTable = () => {
         {REQUIREMENTS.map((item, idx) => (
           <div
             key={item.label}
-            className="flex gap-6 justify-between py-6 items-center border-b last:border-0"
+            className="flex flex-col sm:flex-row gap-6 justify-between py-6 items-center border-b last:border-0"
           >
             <div className="flex gap-10 items-center">
               <div className="text-sm">{"0" + (idx + 1)}</div>
