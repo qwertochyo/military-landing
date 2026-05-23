@@ -29,7 +29,7 @@ const EVENT_LIST = [
 
 export const EventMap = () => {
   return (
-    <div className="border rounded-2xl overflow-hidden shadow-[10px_10px_0] shadow-black">
+    <div className="border rounded-2xl overflow-hidden shadow-[10px_10px_0] shadow-black w-full xl:w-auto">
       <div className="bg-black flex justify-between uppercase px-6 py-3 text-white text-sm tracking-widest">
         <div className="flex gap-3 items-center text-[12px]">
           <div className="relative flex size-2">
@@ -39,8 +39,8 @@ export const EventMap = () => {
         </div>
         <p>№ СВК-2027</p>
       </div>
-      <div className="flex justify-between px-6 py-5 border-b-2">
-        <div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-between p-3 sm:px-6 sm:py-5 border-b-2">
+        <div className="flex flex-col items-center gap-4">
           <h3 className="text-3xl font-bold leading-none">
             Как пройдёт
             <br />
@@ -50,11 +50,11 @@ export const EventMap = () => {
             5 этапов · с 09:00 до 17:30
           </span>
         </div>
-        <span className="text-sm text-secondary font-bold border-2 rounded-lg p-1.5 self-start -rotate-3">
+        <span className="text-sm text-secondary font-bold border-2 rounded-lg p-1.5 self-center sm:self-start -rotate-3">
           ✓ приём открыт
         </span>
       </div>
-      <div className="flex flex-col px-6 py-3">
+      <div className="flex flex-col gap-10 sm:gap-1 px-2 sm:px-6 sm:py-3">
         {EVENT_LIST.map((event) => (
           <EventMapItem
             key={event.title}
