@@ -27,7 +27,7 @@ export const Slogan = () => {
       />
       <div className="flex flex-col gap-15 items-center">
         <motion.h2
-          className="text-center text-[clamp(50px,7vw,120px)] leading-[1.1] font-bold"
+          className="text-center text-[clamp(40px,7vw,120px)] leading-[1.1] font-bold"
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
