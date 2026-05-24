@@ -19,9 +19,7 @@ export const SwipeTest = () => {
     current,
     like,
     dislike,
-    reset,
-    setCards,
-    setLiked,
+    reset
   } = useSwipeTest();
 
   const { container, itemLToR, itemRToL, itemBToT } = useAnimationList();
@@ -52,10 +50,8 @@ export const SwipeTest = () => {
                   card={card}
                   cards={cards}
                   infoTrigger={infoTrigger}
-                  setCards={setCards}
-                  onLike={(card) => {
-                    setLiked((prev) => [...prev, card]);
-                  }}
+                  onDislike={dislike}
+                  onLike={like}
                 />
               </motion.div>
             ))

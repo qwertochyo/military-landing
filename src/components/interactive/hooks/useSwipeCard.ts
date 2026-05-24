@@ -1,12 +1,10 @@
 import { useMotionValue, useTransform } from "motion/react";
-import type { ICardItem } from "../../../types/types";
 
 export const useSwipeCard = (
   isFront: boolean,
   index: number,
-  card: ICardItem,
   onRemove: () => void,
-  onLike?: (card: ICardItem) => void
+  onLike: () => void
 ) => {
   const x = useMotionValue(0);
 
@@ -19,15 +17,15 @@ export const useSwipeCard = (
     return rotateRaw.get() + offset;
   });
 
-  const handleDragEnd = () => {
+  const handleDragEnd = (
+    _event: PointerEvent | MouseEvent,
+    info: { offset: { x: number } }
+  ) => {
     if (!isFront) return;
 
-    const threshold = 150;
-
-    if (Number(x.get()) > threshold) {
-      onLike?.(card);
+    if (info.offset.x > 100) {
+      onLike();
     }
-
     onRemove();
   };
 
