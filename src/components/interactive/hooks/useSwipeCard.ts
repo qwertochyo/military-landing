@@ -17,13 +17,15 @@ export const useSwipeCard = (
     return rotateRaw.get() + offset;
   });
 
-  const handleDragEnd = (_, info) => {
+  const handleDragEnd = (
+    _event: PointerEvent | MouseEvent,
+    info: { offset: { x: number } }
+  ) => {
     if (!isFront) return;
-    
+
     if (info.offset.x > 100) {
       onLike();
     }
-
     onRemove();
   };
 
