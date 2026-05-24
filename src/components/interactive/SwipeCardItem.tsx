@@ -7,15 +7,15 @@ interface Props {
   card: ICardItem;
   cards: ICardItem[];
   infoTrigger: number;
-  setCards: React.Dispatch<React.SetStateAction<ICardItem[]>>;
-  onLike?: (card: ICardItem) => void;
+  onDislike: () => void;
+  onLike: () => void;
 }
 
 export const SwipeCardItem = ({
   card,
   cards,
   infoTrigger,
-  setCards,
+  onDislike,
   onLike,
 }: Props) => {
 
@@ -27,8 +27,7 @@ export const SwipeCardItem = ({
   const { x, opacity, rotate, handleDragEnd } = useSwipeCard(
     isFront,
     index,
-    card,
-    () => setCards((prev) => prev.filter((c) => c.id !== id)),
+    onDislike,
     onLike
   );
 

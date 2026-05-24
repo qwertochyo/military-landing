@@ -16,10 +16,10 @@ export const useSwipeTest = () => {
   }, [cards]);
 
   useEffect(() => {
-    if (liked.length > 0) {
+    if (cards.length === 0 && liked.length > 0) {
       setRandomIdx(Math.floor(Math.random() * liked.length));
     }
-  }, [liked]);
+  }, [cards.length, liked.length]);
 
   const removeCard = (card: ICardItem) => {
     setCards((prev) => prev.filter((c) => c.id !== card.id));
